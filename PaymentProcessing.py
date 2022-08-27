@@ -16,7 +16,7 @@ class PaymentProcessing():
                 response = expensive_gateway.process_payment(body)                
                 return response
 
-            else:                               # try once with cheap payment if expensive payment not available
+            else: # try once with cheap payment if expensive payment not available
                 cheap_payment_gateway = CheapPaymentGateway()
                 response = cheap_payment_gateway.process_payment(body)
                 return response
